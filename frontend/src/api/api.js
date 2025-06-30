@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_DEV_API_URL;
+const API_URL = import.meta.env.VITE_API_URL;
 
 // Enhance a section with AI (mocked by backend)
 export const aiEnhance = async (section, content) => {
