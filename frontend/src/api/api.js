@@ -23,8 +23,6 @@ export const saveResume = async (resume) => {
 
 export const downloadSavedResume = async (resumeId) => {
   console.log(resumeId);
-  console.log("logging");
-  
   
   const res = await fetch(`${API_URL}/download-resume/${resumeId}`);
   

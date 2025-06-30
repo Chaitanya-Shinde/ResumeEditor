@@ -8,7 +8,6 @@ import { saveResume, downloadSavedResume } from '../api/api';
 const ResumeEditor = ({ showResumeForm, setShowResumeForm }) => {
   const [resumeId, setResumeId] = useState("");
   const [resume, setResume] = useState({
-    resumeId: "",
     name: 'John Doe',
     title: 'Senior Software Engineer',
     summary: 'Highly motivated and results-oriented Senior Software Engineer with 10+ years of experience in developing scalable web applications and leading successful projects.',
@@ -91,24 +90,24 @@ const ResumeEditor = ({ showResumeForm, setShowResumeForm }) => {
         className={` ${showResumeForm ? 'w-[50%]' : 'w-full'} h-full bg-foreground flex flex-col items-center justify-center rounded-lg
           drop-shadow-xl drop-shadow-muted/20`}
       >
-        {showResumeForm && <div className="flex flex-wrap justify-center gap-4 my-8">
+        {showResumeForm && <div className="flex flex-wrap justify-center gap-4  p-10">
           <button
             onClick={() => setShowResumeForm(false)}
-            className="w-min h-auto p-2 px-10 mt-2 rounded-sm text-background font-semibold bg-text whitespace-nowrap
+            className="w-min h-auto p-2 px-5 rounded-sm text-background font-semibold bg-text whitespace-nowrap
               hover:cursor-pointer hover:bg-text active:bg-muted flex items-center gap-2"
           >
             <FileUp size={20} /> Upload another resume
           </button>
           <button
             onClick={handleSaveResume}
-            className="w-min h-auto p-2 px-10 mt-2 rounded-sm text-background font-semibold bg-text whitespace-nowrap
+            className="w-min h-auto p-2 px-5  rounded-sm text-background font-semibold bg-text whitespace-nowrap
               hover:cursor-pointer hover:bg-text active:bg-muted flex items-center gap-2"
           >
             <Save size={20} /> Save Resume
           </button>
           <button
             onClick={handleDownloadResume}
-            className="w-min h-auto p-2 px-10 mt-2 rounded-sm text-background font-semibold bg-text whitespace-nowrap
+            className="w-min h-auto p-2 px-5 rounded-sm text-background font-semibold bg-text whitespace-nowrap
               hover:cursor-pointer hover:bg-text active:bg-muted flex items-center gap-2"
           >
             <Download size={20} /> Download JSON
