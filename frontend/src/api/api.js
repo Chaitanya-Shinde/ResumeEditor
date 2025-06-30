@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_DEV_API_URL;
 
 // Enhance a section with AI (mocked by backend)
 export const aiEnhance = async (section, content) => {
@@ -20,3 +20,21 @@ export const saveResume = async (resume) => {
   });
   return res.json();
 };
+
+export const downloadSavedResume = async (resumeId) => {
+  console.log(resumeId);
+  console.log("logging");
+  
+  
+  const res = await fetch(`${API_URL}/download-resume/${resumeId}`);
+  
+  if (!res.ok) {
+    throw new Error("Resume not found");
+  }
+
+  const blob = await res.blob();
+  const url = URL.createObjectURL(blob);
+
+  return url;  
+};
+

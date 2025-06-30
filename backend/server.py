@@ -1,6 +1,8 @@
 from fastapi import FastAPI, Request
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi import HTTPException
 import os
 import json
 import uuid
@@ -41,3 +43,11 @@ async def save_resume(req: SaveResumeRequest):
     with open(file_path, "w") as f:
         json.dump(req.resume, f, indent=2)
     return {"message": "Resume saved successfully", "resume_id": resume_id}
+
+@app.get("/download-resume/{resume_id}")
+def download_resume(resume_id: str):
+    file_path = os.path.join(SAVE_DIR, f"{resume_id}.json")
+    if not os.path.exists(file_path):
+        raise HTTPException(status_code=404, detail="Resume not found")
+    return FileResponse(file_path, media_type='application/json', filename=f"{resume_id}.json")
+

@@ -2,13 +2,13 @@ import { FaKeyboard, FaMagic, FaUserCheck } from "react-icons/fa";
 
 export default function HowItWorks() {
   return (
-    <div className="max-w-5xl mx-5 md:mx-auto px-4 py-10">
+    <div className="max-w-5xl mx-5 md:mx-auto my-30 px-4 py-10">
       <h2 className="text-3xl font-bold text-center mb-8">
         How our AI improves your resume.
       </h2>
       <br />
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
         
         {/* Step 1 */}
         <div className="flex flex-col items-center bg-foreground shadow-lg hover:shadow-muted/10 rounded-xl p-6 text-center hover:shadow-xl transition">

@@ -70,20 +70,7 @@ const RichTextEditor = ({ initialContent, onContentChange, placeholder = "Start 
         >
           <List size={18} />
         </button>
-        {/*
-        <button
-          type="button"
-          onMouseDown={(e) => e.preventDefault()}
-          onClick={() => {
-            const url = prompt('Enter the URL');
-            if (url) applyFormat('createLink', url);
-          }}
-          className="p-2 rounded-md hover:bg-gray-200 transition-colors"
-          title="Insert Link"
-        >
-          <Link2 size={18} />
-        </button>
-        */}
+      
       </div>
 
       {/* Editable Content Area */}

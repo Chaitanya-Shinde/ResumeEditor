@@ -96,7 +96,7 @@ const UploadResumeForm = ({setShowResumeForm}) => {
             onChange={handleFileChange}
           />
           {file ? (
-            <span className="font-medium">{file.name}</span>
+            <span className="text-text font-medium">{file.name}</span>
           ) : (
             <span className=" text-xl text-text font-semibold w-[300px]">
               Drag & drop your resume here, or click to select a PDF or Word document

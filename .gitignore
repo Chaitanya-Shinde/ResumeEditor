@@ -29,3 +29,4 @@
 #backend files
 
 /backend/__pycache__/
+/backend/saved_resumes/

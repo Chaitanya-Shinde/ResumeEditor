@@ -4,20 +4,7 @@ import { Sparkles, CircleX  } from 'lucide-react';
 import { aiEnhance } from '../api/api';
 
 const ResumeEditorForm = ({resume, setResume}) => {
-  //const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
-  //const messageTimeoutRef = useRef(null);
-
-  // // Function to show transient messages
-  // const showMessage = (msg) => {
-  //   setMessage(msg);
-  //   if (messageTimeoutRef.current) {
-  //     clearTimeout(messageTimeoutRef.current);
-  //   }
-  //   messageTimeoutRef.current = setTimeout(() => {
-  //     setMessage('');
-  //   }, 3000);
-  // };
 
   // Generic handler for updating text fields
   const handleTextChange = (field, value) => {

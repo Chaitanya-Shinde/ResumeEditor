@@ -92,7 +92,7 @@ const BulletItem = ({ children }) => (
 
 // PDF structure
 const ResumePDF = ({ resume }) => (
-  <PDFViewer style={{ width: '100%', height: '100%' }}>
+  <PDFViewer style={{ width: '100%', height: '100%', borderTopRightRadius: '10px', borderBottomRightRadius: '10px' }}>
     <Document>
       <Page size="A4" style={styles.page}>
 
